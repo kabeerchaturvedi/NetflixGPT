@@ -7,6 +7,7 @@ const useNowPlayingMovies = () => {
   //TMDB API
   const dispatch = useDispatch();
 
+
   const movieLists = async () => {
     const data = await fetch("https://api.themoviedb.org/3/movie/now_playing?page=1", api_options);
     const json = await data.json();
