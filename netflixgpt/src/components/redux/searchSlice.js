@@ -7,7 +7,7 @@ const searchSlice = createSlice({
   },
 
   reducers: {
-    enableSearch: (state, action) => {
+    enableSearch: (state) => {
       state.showGPTSearch = !state.showGPTSearch;
     },
   },
