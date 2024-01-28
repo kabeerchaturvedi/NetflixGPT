@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../../utils/firebase";
 import { useDispatch } from "react-redux";
 import addUser from "../redux/userSlice";
-import { Photo_URL } from "../../utils/constants";
+import { NETFLIX_BG_URL, Photo_URL } from "../../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -68,11 +68,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src="
-          https://assets.nflxext.com/ffe/siteui/vlv3/594f8025-139a-4a35-b58d-4ecf8fdc507c/d3c4e455-f0bf-4003-b7cd-511dda6da82a/IN-en-20240108-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="bg-img"
-        />
+        <img src={NETFLIX_BG_URL} alt="bg-img" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}

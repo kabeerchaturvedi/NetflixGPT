@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 
 const Browse = () => {
   const GPTSearchView = useSelector((store) => store.search.showGPTSearch);
+  console.log(GPTSearchView);
 
   useNowPlayingMovies();
   usePopularMovies();
@@ -20,7 +21,6 @@ const Browse = () => {
         <GPTSearch />
       ) : (
         <>
-          {" "}
           <MainContainer /> <SecondaryContainer />
         </>
       )}
