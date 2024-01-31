@@ -51,8 +51,8 @@ const Header = () => {
 
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
-      <img className="w-44" src={BG_URL} alt="logo" />
-      <div className="flex p-2">
+      <img className="w-44 mx-auto md:mx-0" src={BG_URL} alt="logo" />
+      <div className="flex p-2 justify-between">
         {GPTSearchView && (
           <select className="p-2 m-2 bg-gray-800 text-white" onChange={handleLanguageChange}>
             {SUPPORTED_LANGUAGES.map((lang) => (
@@ -65,7 +65,7 @@ const Header = () => {
         <button className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg" onClick={handleGPTSearch}>
           {GPTSearchView ? "Home Page" : "GPT Search"}
         </button>
-        <img className="w-12 h-12" src={user?.photoURL} alt="usericon" />
+        <img className="hidden md:block w-12 h-12" src={user?.photoURL} alt="usericon" />
         <button className="font-bold text-white" onClick={handleSignout}>
           Sign Out
         </button>

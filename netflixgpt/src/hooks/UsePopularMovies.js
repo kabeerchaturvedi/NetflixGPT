@@ -7,6 +7,8 @@ const usePopularMovies = () => {
   //TMDB API
   const dispatch = useDispatch();
 
+
+  //Memoization
   const popularMovies = useSelector((store) => store.movies.popularMovies);
 
   const movieLists = async () => {

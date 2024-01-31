@@ -7,6 +7,8 @@ const useNowPlayingMovies = () => {
   //TMDB API
   const dispatch = useDispatch();
 
+
+  //Memoization
   const nowPlayingMovies = useSelector((store) => store.movies.nowPlayingMovies);
 
   const movieLists = async () => {
